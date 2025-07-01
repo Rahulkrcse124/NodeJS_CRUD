@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const mongoUrl = "mongodb://localhost:27017/CRUD_OPERATION2";
+// const mongoLocalUrl = process.env.MONGODB_LOCAL_URL ;
+const mongoUrl = process.env.MONGODB_URL;
 
 mongoose.connect(mongoUrl);
 
